@@ -1,16 +1,99 @@
 ---
-
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { Image } from "astro:assets";
+import whoimage from "../images/yoga.svg";
+import storyimage from "../images/story.svg";
+import ContactForm from "../components/ContactFormNetlify.astro";
+const pageTitle = "Jo Dobozi";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout pageTitle={pageTitle}>
+  <div class="container">
+    <article>
+      <div class="intro">
+        <p>Hi, I'm Jo, a Business Intelligence and Research Executive.</p>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur
+          accusamus ipsa et odit voluptate ut sit laudantium perspiciatis,
+          possimus, quibusdam ea architecto autem distinctio necessitatibus,
+          explicabo ad nostrum id reprehenderit!
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, quidem
+          est impedit suscipit deleniti autem ullam in hic velit praesentium
+          ipsa magni minima corporis? Quaerat numquam libero enim sit. Nihil.
+        </p>
+      </div>
+    </article>
+    <article>
+      <div class="grid" id="who">
+        <div>
+          <Image src={whoimage} alt="Who I Am" />
+        </div>
+        <div>
+          <h2>Who I Am</h2>
+          <p>
+            Our driving passion is to understand what makes people tick. To
+            really understand what unites us, what sets us apart and how that
+            impacts the communication we respond to.
+          </p>
+          <p>
+            We also know where and how to source insights, filter out what’s
+            important, make sense of what we have learnt and help apply what’s
+            essential.
+          </p>
+        </div>
+      </div>
+    </article>
+    <article>
+      <div class="grid" id="story">
+        <div class="fp-2">
+          <h2>This is My Story</h2>
+          <p>
+            Everything we do has an element of strategy. We can’t help
+            ourselves.
+          </p>
+          <p>
+            We specialise in brand positioning, brand repositioning, brand
+            architecture and brand creation. All things related to brands.
+          </p>
+          <p>
+            Planning tools are an important part of the process, but brand
+            issues are bespoke, and therefore handled accordingly.
+          </p>
+        </div>
+        <div class="fp-1">
+          <Image src={storyimage} alt="My Story" />
+        </div>
+      </div>
+    </article>
+    <h2 id="contact">Get In Touch</h2>
+    <p style="text-align: center">
+      I would love to hear from you. Just complete the form below and I shall
+      get back to you as soon as I can.
+    </p>
+    <article>
+      <ContactForm />
+    </article>
+  </div>
+</BaseLayout>
+
+<style lang="scss">
+  .intro {
+    // font-size: 1.25rem;
+  }
+  #contact {
+    text-align: center;
+  }
+  html {
+    scroll-padding-top: 3rem;
+  }
+  @media only screen and (max-width: 768px) {
+    .fp-1 {
+      order: 1;
+    }
+    .fp-2 {
+      order: 2;
+    }
+  }
+</style>

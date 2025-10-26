@@ -1,0 +1,30 @@
+---
+const year = new Date().getFullYear();
+---
+
+<div class="container">
+  <footer>
+    &copy; Jo Dobozi 2025 - <span id="footer-year">{year}</span>
+    · Design: <a href="https://onestopsites.net.au/" target="_blank"
+      >One Stop Sites</a
+    >
+  </footer>
+</div>
+<style lang="scss">
+  footer {
+    border-top: 1px solid #bababa;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+    text-align: center;
+    & a {
+      text-decoration: none;
+      color: var(--pico-primary);
+      &:hover {
+        color: var(--pico-primary-hover);
+      }
+    }
+  }
+</style>
+<script is:inline>
+  document.getElementById("footer-year").innerText = new Date().getFullYear();
+</script>
