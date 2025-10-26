@@ -1,8 +1,9 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { Image } from "astro:assets";
-import whoimage from "../images/yoga.svg";
-import storyimage from "../images/story.svg";
+import yogaimage from "../images/yoga.svg";
+import thinkimage from "../images/think.svg";
+import teamimage from "../images/team.svg";
 import ContactForm from "../components/ContactFormNetlify.astro";
 const pageTitle = "Jo Dobozi";
 ---
@@ -11,63 +12,87 @@ const pageTitle = "Jo Dobozi";
   <div class="container">
     <article>
       <div class="intro">
-        <p>Hi, I'm Jo, a Business Intelligence and Research Executive.</p>
         <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur
-          accusamus ipsa et odit voluptate ut sit laudantium perspiciatis,
-          possimus, quibusdam ea architecto autem distinctio necessitatibus,
-          explicabo ad nostrum id reprehenderit!
+          Hi, I’m Jo, a Business Intelligence professional and a daughter,
+          sister, partner and friend.
         </p>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, quidem
-          est impedit suscipit deleniti autem ullam in hic velit praesentium
-          ipsa magni minima corporis? Quaerat numquam libero enim sit. Nihil.
+          After growing up in Hungary, I pursued my education in Germany and
+          travelled the world to get to know my place in it. Once in Australia,
+          I fell in love with it and my vision was clear: I ought to stay.
         </p>
       </div>
     </article>
     <article>
-      <div class="grid" id="who">
+      <div class="grid" id="trust">
         <div>
-          <Image src={whoimage} alt="Who I Am" />
+          <Image src={thinkimage} alt="Trust" />
         </div>
         <div>
-          <h2>Who I Am</h2>
+          <h2>Trust, Think, Thrive</h2>
           <p>
-            Our driving passion is to understand what makes people tick. To
-            really understand what unites us, what sets us apart and how that
-            impacts the communication we respond to.
+            My best decisions in life have been guided by the sentiment of these
+            three words. When I aim to achieve something, I trust in a positive
+            outcome, think my plan through to succeed, and lastly, I thrive on
+            what I have gained: be it what I aimed for, or what I learned from
+            trying.
           </p>
           <p>
-            We also know where and how to source insights, filter out what’s
-            important, make sense of what we have learnt and help apply what’s
-            essential.
+            Through this, I’ve built resilience. I’ve become adaptable and
+            resourceful – both of which are invaluable assets in my personal and
+            professional life alike.
           </p>
         </div>
       </div>
     </article>
     <article>
-      <div class="grid" id="story">
+      <div class="grid" id="yoga">
         <div class="fp-2">
-          <h2>This is My Story</h2>
+          <h2>If we’d meet in person…</h2>
           <p>
-            Everything we do has an element of strategy. We can’t help
-            ourselves.
+            …You’d find that I’m an attentive listener. I seek to receive what
+            is shared without prejudice.
           </p>
           <p>
-            We specialise in brand positioning, brand repositioning, brand
-            architecture and brand creation. All things related to brands.
+            You may discover my calm demeanour, even if tough questions are
+            asked. I think my decisions through.
           </p>
           <p>
-            Planning tools are an important part of the process, but brand
-            issues are bespoke, and therefore handled accordingly.
+            You may also learn that I practice yoga and oyster mushroom
+            cultivation. Being somewhat of a psychology nerd, I’m thrilled by
+            each opportunity I get to understand why we humans do what we do.
           </p>
         </div>
         <div class="fp-1">
-          <Image src={storyimage} alt="My Story" />
+          <Image src={yogaimage} alt="Calmness" />
         </div>
       </div>
     </article>
-    <h2 id="contact">Get In Touch</h2>
+    <article>
+      <div class="grid" id="team">
+        <div>
+          <Image src={teamimage} alt="Team" />
+        </div>
+        <div>
+          <h2>If we worked together…</h2>
+
+          <p>
+            … I’d propose for our team to build on its members’ strengths and
+            passions. A sense of meaning is what I seek in a role.
+          </p>
+          <p>
+            You’d discover that I’m a dedicated professional, with my values
+            being discipline, responsibility and quality.
+          </p>
+          <p>
+            While I appreciate structure, I lean on resilience and creativity
+            when there is none. This is why I enjoy working with data: finding
+            insights in “chaos” is fun!
+          </p>
+        </div>
+      </div>
+    </article>
+    <h2 id="contact">Get in touch…</h2>
     <p style="text-align: center">
       I would love to hear from you. Just complete the form below and I shall
       get back to you as soon as I can.
