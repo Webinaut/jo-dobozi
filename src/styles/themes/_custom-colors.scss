@@ -18,23 +18,23 @@
 @media only screen and (prefers-color-scheme: dark) {
   :root:not([data-theme]),
   :host:not([data-theme]) {
-    --pico-color: var(--pico-primary);
+    --pico-color: var(--pico-primary-inverse);
     // --pico-color: #373c44;
     // --pico-primary-inverse: #fff;
     // --pico-h1-color: var(--pico-primary-inverse);
     --pico-submenu-color: var(--pico-color);
     .grid img {
-      background-color: var(--pico-primary);
+      background-color: var(--pico-primary-inverse);
     }
   }
 }
 /* Enabled if forced with data-theme="dark" */
 [data-theme="dark"] {
-  --pico-color: var(--pico-primary);
+  --pico-color: var(--pico-primary-inverse);
   // --pico-color: #373c44;
   // --pico-primary-inverse: #fff;
   // --pico-h1-color: var(--pico-primary-inverse);
   .grid img {
-    background-color: var(--pico-primary);
+    background-color: var(--pico-primary-inverse);
   }
 }
