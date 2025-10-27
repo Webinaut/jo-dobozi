@@ -1,8 +1,8 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { Image } from "astro:assets";
-import yogaimage from "../images/yoga.svg";
-import thinkimage from "../images/think.svg";
+import environmentimage from "../images/environment.svg";
+import coffeeimage from "../images/getting-coffee.svg";
 import teamimage from "../images/team.svg";
 import ContactForm from "../components/ContactFormNetlify.astro";
 const pageTitle = "Jo Dobozi";
@@ -18,15 +18,15 @@ const pageTitle = "Jo Dobozi";
         </p>
         <p>
           After growing up in Hungary, I pursued my education in Germany and
-          travelled the world to get to know my place in it. Once in Australia,
-          I fell in love with it and my vision was clear: I ought to stay.
+          travelled the world to connect with it. When I got to Australia, my
+          vision was clear: I ought to stay.
         </p>
       </div>
     </article>
     <article>
       <div class="grid" id="trust">
         <div>
-          <Image src={thinkimage} alt="Trust" />
+          <Image src={environmentimage} alt="Trust" />
         </div>
         <div>
           <h2>Trust, Think, Thrive</h2>
@@ -48,7 +48,7 @@ const pageTitle = "Jo Dobozi";
     <article>
       <div class="grid" id="yoga">
         <div class="fp-2">
-          <h2>If we’d meet in person…</h2>
+          <h2>If we met in person…</h2>
           <p>
             …You’d find that I’m an attentive listener. I seek to receive what
             is shared without prejudice.
@@ -64,7 +64,7 @@ const pageTitle = "Jo Dobozi";
           </p>
         </div>
         <div class="fp-1">
-          <Image src={yogaimage} alt="Calmness" />
+          <Image src={coffeeimage} alt="Calmness" />
         </div>
       </div>
     </article>
@@ -92,7 +92,7 @@ const pageTitle = "Jo Dobozi";
         </div>
       </div>
     </article>
-    <h2 id="contact">Get in touch…</h2>
+    <h2 id="contact">Get in touch</h2>
     <p style="text-align: center">
       I would love to hear from you. Just complete the form below and I shall
       get back to you as soon as I can.

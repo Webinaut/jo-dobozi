@@ -1,38 +1,11 @@
 ---
 import { Image } from "astro:assets";
+import ContactButton from "../components/ContactButton.astro";
 import jopic from "../images/Jo.png";
-import HomeIcon from "../components/CarbonHome.astro";
 ---
 
-<div id="home"></div>
-<div class="container-fluid navigation">
-  <div class="hamburger">
-    <span class="bar"></span>
-    <span class="bar"></span>
-    <span class="bar"></span>
-  </div>
-
-  <div class="main-nav">
-    <nav>
-      <ul>
-        <li>
-          <a href="#home"><HomeIcon /></a>
-        </li>
-        <li>
-          <a href="#trust">Trust</a>
-        </li>
-        <li>
-          <a href="#yoga">Listening</a>
-        </li>
-        <li>
-          <a href="#team">Team</a>
-        </li>
-        <li>
-          <a href="#contact">Contact</a>
-        </li>
-      </ul>
-    </nav>
-  </div>
+<div class="container-fluid contact-button">
+  <ContactButton />
 </div>
 
 <div class="container-fluid header-grid">
@@ -53,26 +26,14 @@ import HomeIcon from "../components/CarbonHome.astro";
       display: grid;
       grid-template-columns: repeat(12, 1fr);
       grid-auto-rows: minmax(10px, auto);
-      grid-gap: 5px;
       background: #425e5e;
       background: linear-gradient(
         180deg,
         rgba(66, 94, 94, 0.79) 0%,
         rgba(128, 168, 121, 0.8) 35%
       );
-      // background-image: url(../../assets/images/MirrorBackground.jpeg);
       background-size: cover;
-      // background-position: 0px 800px;
       padding: 20px 0 0 20px;
-      // animation: slideUp 2s 3s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
-      // @keyframes slideUp {
-      //   0% {
-      //     background-position: 0px 800px;
-      //   }
-      //   100% {
-      //     background-position: 0px 0px;
-      //   }
-      // }
     }
   }
   .main-nav {
@@ -86,84 +47,29 @@ import HomeIcon from "../components/CarbonHome.astro";
   }
   .hero1 {
     grid-area: 2 / 2 / 3 / span 12;
-    margin-left: 1em;
-    // opacity: 0;
-    // animation: fadeIn 1s 1s ease-in-out forwards;
-    // @keyframes fadeIn {
-    //   0% {
-    //     opacity: 0;
-    //   }
-    //   100% {
-    //     opacity: 1;
-    //   }
-    // }
-    & h1 {
-      z-index: 3;
-      // animation: colorChange 0.5s 6.5s cubic-bezier(0.455, 0.03, 0.515, 0.955)
-      //   forwards;
-      // @keyframes colorChange {
-      //   0% {
-      //   }
-      //   100% {
-      //     color: #fff;
-      //   }
-      // }
-    }
+    justify-self: start;
   }
   .hero2 {
     grid-area: 3 / 2 / 4 / span 12;
-    margin-left: 1em;
+    justify-self: start;
     margin-bottom: 1em;
-    z-index: 4;
-    // opacity: 0;
-    // animation: fadeIn 1s 2.5s ease-in-out forwards;
-    // @keyframes fadeIn {
-    //   0% {
-    //     opacity: 0;
-    //   }
-    //   100% {
-    //     opacity: 1;
-    //   }
-    // }
+
     & h1 {
-      z-index: 3;
-      // animation: colorChange 0.5s 6.5s cubic-bezier(0.455, 0.03, 0.515, 0.955)
-      //   forwards;
-      // @keyframes colorChange {
-      //   0% {
-      //   }
-      //   100% {
-      //     color: #fff;
-      //   }
-      // }
+      padding-left: 0.28em;
     }
   }
   .image_top {
     img {
       filter: grayscale(1);
       max-height: 90vh;
-      width: 400px;
+      width: 30vw;
       height: auto;
-      z-index: 5;
     }
 
     grid-area: 1 / 9 / span 3 / span 4;
     justify-self: end;
-    // opacity: 0;
-    // animation: fadeIn 2s 5s ease-in-out forwards;
-    // @keyframes fadeIn {
-    //   0% {
-    //     opacity: 0;
-    //   }
-    //   100% {
-    //     opacity: 1;
-    //   }
-    // }
   }
-  .container-fluid.main-nav {
-    justify-content: flex-start;
-  }
-  .container-fluid.navigation {
+  .container-fluid.contact-button {
     display: flex;
     justify-content: flex-start;
     position: fixed;
@@ -171,80 +77,4 @@ import HomeIcon from "../components/CarbonHome.astro";
     z-index: 10;
     background-color: transparent;
   }
-  .main-nav {
-    > nav {
-      display: flex;
-      background-color: var(--pico-primary-inverse);
-    }
-    & ul {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      margin: 0;
-      padding: 0.5rem 0 0 0.5rem;
-    }
-  }
-  .main-nav ul li {
-    list-style-type: none;
-    & a:where(a:not([role="button"])) {
-      color: var(--pico-primary);
-      &:hover {
-        cursor: pointer;
-        color: var(--pico-text-selection-color);
-      }
-    }
-  }
-  .hamburger {
-    display: block;
-    cursor: pointer;
-  }
-  .expanded {
-    display: unset;
-  }
-  .hamburger.expanded .bar:nth-child(2) {
-    opacity: 0;
-  }
-  .hamburger.expanded .bar:nth-child(1) {
-    transform: translateY(10px) rotate(45deg);
-  }
-  .hamburger.expanded .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-  }
-
-  .bar {
-    display: block;
-    width: 33px;
-    height: 4px;
-    margin-bottom: 5px;
-    background: var(--pico-primary-hover);
-    border-radius: 3px;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-  }
-
-  .main-nav {
-    display: none;
-  }
-  .main-nav.expanded {
-    z-index: 1;
-    background: var(--pico-primary-inverse);
-    padding: 0.5em;
-    border: solid var(--pico-primary-inverse);
-    border-width: 2px 0 0 0;
-    box-shadow: 0px 4px 10px -2px rgba(0, 0, 0, 0.1);
-    display: block;
-    position: absolute;
-    top: 75px;
-  }
 </style>
-<script>
-  // Toggle Hamburger Menu
-  document.querySelector(".hamburger").addEventListener("click", () => {
-    document.querySelector(".main-nav").classList.toggle("expanded");
-    document.querySelector(".hamburger").classList.toggle("expanded");
-  });
-  document.querySelector(".main-nav").addEventListener("click", () => {
-    document.querySelector(".main-nav").classList.toggle("expanded");
-    document.querySelector(".hamburger").classList.toggle("expanded");
-  });
-</script>
