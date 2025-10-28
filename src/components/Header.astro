@@ -68,6 +68,7 @@ import jopic from "../images/Jo.png";
 
     grid-area: 1 / 9 / span 3 / span 4;
     justify-self: end;
+    align-self: end;
   }
   .container-fluid.contact-button {
     display: flex;
@@ -76,5 +77,15 @@ import jopic from "../images/Jo.png";
     top: 0;
     z-index: 10;
     background-color: transparent;
+  }
+  @media only screen and (max-width: 768px) {
+    .container-fluid.header-grid {
+      grid-auto-rows: minmax(10px, 50px);
+    }
+    .container-fluid.contact-button {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
   }
 </style>
