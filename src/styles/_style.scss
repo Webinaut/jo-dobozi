@@ -68,7 +68,9 @@ h5 {
   #{$css-var-prefix}font-size: 1.25rem;
   #{$css-var-prefix}typography-spacing-vertical: 1.25rem;
 }
-
+article {
+  margin-top: var(--pico-block-spacing-vertical);
+}
 // button,
 // button[type="submit"],
 // input[type="submit"],
